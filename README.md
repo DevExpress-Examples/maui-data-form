@@ -11,16 +11,6 @@
 
 The **DevExpress Mobile UI for Xamarin.Forms and .NET MAUI** is free of charge. To learn more about our offer and to reserve your copy, visit [Free DevExpress Mobile UI for Xamarin.Forms and .NET MAUI](https://www.devexpress.com/xamarin-free).
 
-## Requirements
-
-Please register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for more information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
-
-## What's in This Repository
-
-A demo application in this repository demonstrates the capabilities of the **DevExpress Data Form for .NET MAUI** &#8212; a control that allows you to display and edit data objects.
-
-<img src="./Images/data-form-iphone.png" alt="DevExpress Data Form for .NET MAUI" height="700">
-
 ## Documentation
 
 - [Data Grid](https://docs.devexpress.com/MAUI/403255/data-grid/data-grid)
@@ -42,3 +32,15 @@ A demo application in this repository demonstrates the capabilities of the **Dev
 * [Drawer Page](https://github.com/DevExpress-Examples/maui-drawer-page-get-started)
 * [Drawer View](https://github.com/DevExpress-Examples/maui-drawer-view-get-started)
 * [Collection View](https://github.com/DevExpress-Examples/maui-collection-view-get-started)
+
+## What's in This Repository
+
+A demo application in this repository demonstrates the capabilities of the **DevExpress Data Form for .NET MAUI** &#8212; a control that allows you to display and edit data objects.
+
+<img src="./Images/data-form-iphone.png" alt="DevExpress Data Form for .NET MAUI" height="700">
+
+See the following help topic for more information: [DevExpress Data Form for .NET MAUI](https://docs.devexpress.com/MAUI/403640/data-form).
+
+## Requirements
+
+Please register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for more information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
