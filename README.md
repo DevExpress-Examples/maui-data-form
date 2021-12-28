@@ -37,7 +37,7 @@ The **DevExpress Mobile UI for Xamarin.Forms and .NET MAUI** is free of charge. 
 
 A demo application in this repository demonstrates the capabilities of the **DevExpress Data Form for .NET MAUI** &#8212; a control that allows you to display and edit data objects.
 
-<img src="./Images/data-form-iphone.png" alt="DevExpress Data Form for .NET MAUI" height="700">
+<img src="./Images/data-form-iphone.png" alt="DevExpress Data Form for iOS" height="700"> <img src="./Images/data-form-pixel.png" alt="DevExpress Data Form for Android" height="700">
 
 See the following help topic for more information: [DevExpress Data Form for .NET MAUI](https://docs.devexpress.com/MAUI/403640/data-form).
 
