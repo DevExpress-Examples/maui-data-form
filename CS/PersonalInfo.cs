@@ -13,7 +13,7 @@ namespace DataForm_GettingStarted {
         public string LastName { get; set; }
 
         [DataFormDisplayOptions(LabelIcon = "birthdate", GroupName = "Profile")]
-        public DateTime BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
 
         [DataFormDisplayOptions(IsVisible = false)]
         public virtual Gender Gender { get; set; }
