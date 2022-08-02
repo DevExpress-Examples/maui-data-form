@@ -29,6 +29,6 @@
     <MauiFont Include="Resources\Fonts\*"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Maui.Editors" Version="22.1.3" />
+    <PackageReference Include="DevExpress.Maui.Editors" Version="22.1.*" />
   </ItemGroup>
 </Project>
