@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GettingStarted", "\GettingStarted\GettingStarted.csproj", "{2CC57DF5-1395-4D13-AFB7-87234C5DF2B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GettingStarted", "GettingStarted\GettingStarted.csproj", "{2CC57DF5-1395-4D13-AFB7-87234C5DF2B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBoxEditor", "\ComboBoxEditor\ComboBoxEditor.csproj", "{503BD072-0FF5-4B43-B96D-E8224AED3417}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBoxEditor", "ComboBoxEditor\ComboBoxEditor.csproj", "{503BD072-0FF5-4B43-B96D-E8224AED3417}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
