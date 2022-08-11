@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
+             xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             x:Class="CustomAppearance.MainPage">
+
+    <ContentPage.Resources>
+        <CornerRadius x:Key="DXEditBaseCornerRadius">0</CornerRadius>
+        <Thickness x:Key="DXEditBaseBoxPadding">0</Thickness>
+        <x:Double x:Key="DXEditBaseBoxMinHeight">41</x:Double>
+        <x:Double x:Key="DXEditBaseBorderThickness">0</x:Double>
+        <x:Double x:Key="DXEditBaseFocusedBorderThickness">0</x:Double>
+        <Color x:Key="DXEditBaseBorderColor">Transparent</Color>
+        <Color x:Key="DXEditBaseFocusedBorderColor">Transparent</Color>
+        <Color x:Key="DXEditBaseFilledBackgroundColor">Transparent</Color>
+        <Color x:Key="DXEditBasePlaceholderColor">#9f9f9f</Color>
+        <Color x:Key="DXEditBaseTextColor">#545454</Color>
+        <dxco:IconVisibility x:Key="DXTextEditBaseClearIconVisibility">Never</dxco:IconVisibility>
+    </ContentPage.Resources>
+
+    <dxdf:DataFormView x:Name="dataForm"
+                       IsEditorLabelVisible="False"
+                       ContentPadding="12,0"                   
+                       GroupHeaderPadding="2,8"
+                       GroupHeaderBackgroundColor="#e6e6e6"
+                       GroupHeaderTextColor="#000000"
+                       AllowCollapseGroups="False"
+                       RowSeparatorColor="#aaaaaa"
+                       RowSeparatorThickness="1"
+                       IsLastRowSeparatorVisible="False">
+        <dxdf:DataFormCustomItem FieldName="PhotoPath">
+            <StackLayout Padding="16">
+                <Frame Padding="0"
+                       HorizontalOptions="Center"
+                       BorderColor="#dadada"
+                       WidthRequest="100"
+                       HeightRequest="100"
+                       CornerRadius="50"
+                       IsClippedToBounds="True">
+                    <Image Source="{Binding PhotoPath}"
+                           BackgroundColor="Gray"
+                           Aspect="AspectFill"/>
+                </Frame>
+            </StackLayout>
+        </dxdf:DataFormCustomItem>
+    </dxdf:DataFormView>
+
+
+</ContentPage>

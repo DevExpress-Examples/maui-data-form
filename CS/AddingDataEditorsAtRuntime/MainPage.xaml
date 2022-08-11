@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
+             x:Class="AddingDataEditorsAtRuntime.MainPage">
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <dxdf:DataFormView x:Name="dataForm" />
+        <Button Grid.Row="1" HeightRequest="50" Text="Add Editor" Clicked="Button_Clicked"/>
+    </Grid>
+</ContentPage>
