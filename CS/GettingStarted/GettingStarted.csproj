@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
+    <TargetFrameworks>net7.0-android;net7.0-ios</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <RootNamespace>DataForm_GettingStarted</RootNamespace>
     <UseMaui>true</UseMaui>
@@ -15,8 +15,8 @@
     <ApplicationVersion>1</ApplicationVersion>
     <!-- Required for C# Hot Reload -->
     <UseInterpreter Condition="'$(Configuration)' == 'Debug'">False</UseInterpreter>
-    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-ios'">14.2</SupportedOSPlatformVersion>
-    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-android'">21.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net7.0-ios'">14.2</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net7.0-android'">21.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
     <!-- App Icon -->
@@ -29,6 +29,6 @@
     <MauiFont Include="Resources\Fonts\*"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Maui.Editors" Version="22.1.*" />
+    <PackageReference Include="DevExpress.Maui.Editors" Version="22.2.2-beta" />
   </ItemGroup>
 </Project>

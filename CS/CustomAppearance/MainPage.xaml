@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
              xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             xmlns:dxc="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              x:Class="CustomAppearance.MainPage">
 
     <ContentPage.Resources>
@@ -16,7 +17,7 @@
         <Color x:Key="DXEditBaseFilledBackgroundColor">Transparent</Color>
         <Color x:Key="DXEditBasePlaceholderColor">#9f9f9f</Color>
         <Color x:Key="DXEditBaseTextColor">#545454</Color>
-        <dxco:IconVisibility x:Key="DXTextEditBaseClearIconVisibility">Never</dxco:IconVisibility>
+        <dxc:IconVisibility x:Key="DXTextEditBaseClearIconVisibility">Never</dxc:IconVisibility>
     </ContentPage.Resources>
 
     <dxdf:DataFormView x:Name="dataForm"
