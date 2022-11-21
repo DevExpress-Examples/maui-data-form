@@ -9,7 +9,7 @@
 
 ![DevExpress Mobile UI for .NET MAUI](./Images/maui.png)
 
-The **DevExpress Mobile UI for Xamarin.Forms and .NET MAUI** is free of charge. To learn more about our offer and to reserve your copy, visit [Free DevExpress Mobile UI for Xamarin.Forms and .NET MAUI](https://www.devexpress.com/xamarin-free).
+The **DevExpress Mobile UI for Xamarin.Forms and .NET MAUI** is free of charge. To learn more about our offer and to obtain your copy, visit [Free DevExpress Mobile UI for Xamarin.Forms and .NET MAUI](https://www.devexpress.com/xamarin-free).
 
 ## Requirements
 
@@ -27,7 +27,7 @@ The [Getting Started](./CS/DataFormGetStarted/) project demonstrates the capabil
 
 See the following help topic for more information: [DevExpress Data Form for .NET MAUI](https://docs.devexpress.com/MAUI/403640/data-form).
 
-You can also refer to the following YouTube video for instruction on how to get started with the Data Form Control: [Adding a Data Form to Your .NET MAUI App](https://www.youtube.com/watch?v=imUCmru5Lwc&ab_channel=DevExpress).
+You can also refer to the following YouTube video for instructions on how to get started with the Data Form Control: [Adding a Data Form to Your .NET MAUI App](https://www.youtube.com/watch?v=imUCmru5Lwc&ab_channel=DevExpress).
 
 
 ### Customize the Data Form Appearance
