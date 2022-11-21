@@ -1,6 +1,6 @@
 # DevExpress Data Form for .NET MAUI - Get Started
 
-This example describes how to get started with the DataForm Control for .NET MAUI.
+This example shows how to get started with the DataForm Control for .NET MAUI.
 
 <img src="../../Images/data-form-example-iphone.png" alt="DevExpress Data Form for iOS" height="700"/> <img src="../../Images/data-form-example-pixel.png" alt="DevExpress Data Form for Android" height="700"/>
 
