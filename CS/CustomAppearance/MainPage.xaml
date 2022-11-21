@@ -2,22 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
+             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
              xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
              xmlns:dxc="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              x:Class="CustomAppearance.MainPage">
-
     <ContentPage.Resources>
-        <CornerRadius x:Key="DXEditBaseCornerRadius">0</CornerRadius>
-        <Thickness x:Key="DXEditBaseBoxPadding">0</Thickness>
-        <x:Double x:Key="DXEditBaseBoxMinHeight">41</x:Double>
-        <x:Double x:Key="DXEditBaseBorderThickness">0</x:Double>
-        <x:Double x:Key="DXEditBaseFocusedBorderThickness">0</x:Double>
-        <Color x:Key="DXEditBaseBorderColor">Transparent</Color>
-        <Color x:Key="DXEditBaseFocusedBorderColor">Transparent</Color>
-        <Color x:Key="DXEditBaseFilledBackgroundColor">Transparent</Color>
-        <Color x:Key="DXEditBasePlaceholderColor">#9f9f9f</Color>
-        <Color x:Key="DXEditBaseTextColor">#545454</Color>
-        <dxc:IconVisibility x:Key="DXTextEditBaseClearIconVisibility">Never</dxc:IconVisibility>
+        <Style TargetType="dxe:EditBase" ApplyToDerivedTypes="True">
+            <Setter Property="CornerRadius" Value="0"/>
+            <Setter Property="TextColor" Value="BlueViolet"/>
+        </Style>
     </ContentPage.Resources>
 
     <dxdf:DataFormView x:Name="dataForm"
