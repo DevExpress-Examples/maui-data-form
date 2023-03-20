@@ -42,7 +42,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="DevExpress.Maui.Editors" Version="22.2.*" />
+	  <PackageReference Include="DevExpress.Data" Version="23.1.2-pre-*" />
+	  <PackageReference Include="DevExpress.Maui.Controls" Version="23.1.1-pre-*" />
+	  <PackageReference Include="DevExpress.Maui.Editors" Version="23.1.1-pre-*" />
 	</ItemGroup>
 
 </Project>

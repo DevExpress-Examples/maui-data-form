@@ -3,13 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
              x:Class="ComboBoxEditor.MainPage">
-
     <ScrollView>
         <StackLayout>
             <dxdf:DataFormView x:Name="dataForm"
-                               EditorLabelWidth="95">
+                               EditorLabelWidth="95"
+                               IsAutoGenerationEnabled="False">
+                <dxdf:DataFormTextItem FieldName="FirstName" LabelText="First name" ReturnType="Next" TabIndex="0"/>
+                <dxdf:DataFormTextItem FieldName="LastName" LabelText="Last name" ReturnType="Next" TabIndex="1"/>
+                <dxdf:DataFormComboBoxItem FieldName="Department" 
+                                           ValueMember = "DepartmentCode"
+                                           DisplayMember = "DepartmentName" 
+                                           ReturnType="Next" 
+                                           IsFilterEnabled="True" 
+                                           TabIndex="4"/>
+                <dxdf:DataFormComboBoxItem FieldName="Status" ReturnType="Next" 
+                                           IsFilterEnabled="True" 
+                                           TabIndex="5"/>
+                <dxdf:DataFormTextItem FieldName="Email" ReturnType="Next" TabIndex="2"/>
+                <dxdf:DataFormTextItem FieldName="Bio" ReturnType="Next" TabIndex="3"/>
             </dxdf:DataFormView>
         </StackLayout>
     </ScrollView>
-
 </ContentPage>

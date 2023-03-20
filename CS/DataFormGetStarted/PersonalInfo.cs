@@ -1,15 +1,8 @@
 ﻿using DevExpress.Maui.DataForm;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DataFormGetStarted
-{
-    public class PersonalInfo
-    {
+namespace DataFormGetStarted {
+    public class PersonalInfo {
         [DataFormItemPosition(RowOrder = 1, ItemOrderInRow = 1)]
         [DataFormTextEditor(InplaceLabelText = "First Name")]
         [DataFormDisplayOptions(LabelIcon = "name", GroupName = "Profile")]
@@ -19,7 +12,6 @@ namespace DataFormGetStarted
         [DataFormTextEditor(InplaceLabelText = "Last Name")]
         [DataFormDisplayOptions(IsLabelVisible = false, GroupName = "Profile")]
         public string LastName { get; set; }
-
         [DataFormDisplayOptions(GroupName = "Profile")]
         public DateTime? BirthDate { get; set; }
 

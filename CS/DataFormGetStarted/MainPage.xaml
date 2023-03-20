@@ -9,12 +9,12 @@
     ios:Page.UseSafeArea="true">
     <ScrollView>
         <StackLayout>
-        <dxdf:DataFormView
-            x:Name="dataform"
-            EditorBoxMode="Filled"
-            EditorLabelColor="#505050"
-            EditorLabelFontAttributes="Italic"
-            ValidationMode="PropertyChanged" />
-    </StackLayout>
+            <dxdf:DataFormView
+                    x:Name="dataform"
+                    EditorBoxMode="Filled"
+                    EditorLabelColor="#505050"
+                    EditorLabelFontAttributes="Italic"
+                    ValidationMode="PropertyChanged" />
+        </StackLayout>
     </ScrollView>
 </ContentPage>

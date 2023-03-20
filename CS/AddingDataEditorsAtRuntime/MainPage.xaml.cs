@@ -7,7 +7,7 @@ namespace AddingDataEditorsAtRuntime {
         public MainPage() {
             InitializeComponent();
             dataForm.IsAutoGenerationEnabled = false;
-            dataForm.CommitMode = CommitMode.PropertyChanged;
+            dataForm.CommitMode = CommitMode.Input;
             dataForm.DataObject = dataModel;
         }
 

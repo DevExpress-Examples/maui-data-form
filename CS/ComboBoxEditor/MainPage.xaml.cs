@@ -15,12 +15,10 @@ namespace ComboBoxEditor {
     public class EmployeeInfo {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        [DataFormComboBoxEditor(ValueMember = "DepartmentCode", DisplayMember = "DepartmentName")]
         public int Department { get; set; }
-
-        [DataFormComboBoxEditor]
-        public string Status { get; set; }
+        public string Status { get; set; } = "Salaried";
+        public string Email { get; set; }
+        public string Bio { get; set; }
     }
 
     public class ComboBoxDataProvider : IPickerSourceProvider {

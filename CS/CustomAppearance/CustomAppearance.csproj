@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net7.0-android;net7.0-ios</TargetFrameworks>
@@ -40,9 +40,12 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
-
 	<ItemGroup>
-	  <PackageReference Include="DevExpress.Maui.Editors" Version="22.2.*" />
+	  <PackageReference Include="DevExpress.Data" Version="23.1.2-pre-*" />
+	  <PackageReference Include="DevExpress.Maui.Core" Version="23.1.1-pre-*" />
+	  <PackageReference Include="DevExpress.Maui.Editors" Version="23.1.1-pre-*" />
+
 	</ItemGroup>
+
 
 </Project>
