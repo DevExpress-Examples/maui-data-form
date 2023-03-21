@@ -15,6 +15,7 @@ namespace ComboBoxEditor {
     public class EmployeeInfo {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public DateTime RegistrationDate { get; set; } = DateTime.Now;
         public int Department { get; set; }
         public string Status { get; set; } = "Salaried";
         public string Email { get; set; }
