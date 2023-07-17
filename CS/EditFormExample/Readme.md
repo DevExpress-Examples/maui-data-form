@@ -1,6 +1,6 @@
 # DataFormView for .NET MAUI - Edit a Contact’s Data
 
-This example demonstrates how to use [DataForm](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) to implement a contact data's edit form.  
+This example demonstrates how to use a [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) to implement a contact edit form.  
 
 <img src="https://user-images.githubusercontent.com/12169834/228216536-48240713-be2f-45e7-9dda-dbf843682500.png" width="30%"/>
 
@@ -22,11 +22,11 @@ Included controls and their properties:
     <dxdf:DataFormTextItem FieldName="FirstName" .../>
     ```
 
-    File to Look At: [MainPage.xaml](MainPage.xaml)
+    File to Look At: [MainPage.xaml](CS/MainPage.xaml)
 
-* Call the [DataFormView.Commit](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView.Commit) method to validate the input values and then send the changes to a data source. 
+* Call the [DataFormView.Commit](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView.Commit) method to validate input values and send changes to the data source. 
 
-* [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) supports validation with events or the displayed object's attributes. The following code snippet validates an `Email` value with a validation event:
+* [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) supports validation events and attributes. The following code uses a validation event for `Email` values:
 
     ```csharp
     private void ValidateCustomerProperties(object sender, DevExpress.Maui.DataForm.DataFormPropertyValidationEventArgs e) {
@@ -40,9 +40,9 @@ Included controls and their properties:
     }
     ```
 
-    File to Look At: [MainPage.xaml.cs](MainPage.xaml.cs)
+    File to Look At: [MainPage.xaml.cs](CS/MainPage.xaml.cs)
 
-    The following code snippet defines validation attributes of the `FirstName` and `LastName` properties:
+    The following code snippet defines validation attributes for `FirstName` and `LastName` properties:
 
     ```csharp
     public class Customer {
@@ -56,15 +56,15 @@ Included controls and their properties:
     }
     ```
 
-    File to Look At: [MainPage.xaml](MainPage.xaml)
+    File to Look At: [MainPage.xaml](CS/MainPage.xaml)
 
-* [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) automatically aligns its editors. You can customize color and width of these labels:
+* [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) automatically aligns its editors. You can customize the color and width of editor labels:
 
     ```xaml
     <dxdf:DataFormView EditorLabelColor="{StaticResource Primary}" EditorLabelWidth="40">
     ```
 
-    File to Look At: [MainPage.xaml](MainPage.xaml)
+    File to Look At: [MainPage.xaml](CS/MainPage.xaml)
 
 * Embedded [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView)'s editors contain customization options such as [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon), [InplaceLabelText](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.InplaceLabelText), [LabelText](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelText), and [IsInplaceLabelFloating](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.IsLabelFloating).
 
@@ -78,9 +78,9 @@ Included controls and their properties:
     </dxdf:DataFormView>
     ```
 
-    File to Look At: [MainPage.xaml](MainPage.xaml)
+    File to Look At: [MainPage.xaml](CS/MainPage.xaml)
 
-* If an editor's [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon) property is not specified, [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) displays the bound property's name in the editor's label area. You can set the editor's [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon) property to `""` to hide this text.
+* If an editor's [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon) property is not specified, [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) displays the bound property's name in the editor's label area. You can set the editor's [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon) property to an empty string to hide this text.
 
     ```xml
     <dxdf:DataFormTextItem FieldName="LastName" LabelText="" InplaceLabelText="Last Name" .../>
@@ -96,10 +96,10 @@ Included controls and their properties:
 ## Files to Look At
 
 <!-- default file list -->
-* [MainPage.xaml](MainPage.xaml)
-* [MainPage.xaml.cs](MainPage.xaml.cs)
-* [MainViewModel.cs](MainViewModel.cs)
-* [App.xaml](App.xaml)
+* [MainPage.xaml](CS/MainPage.xaml)
+* [MainPage.xaml.cs](CS/MainPage.xaml.cs)
+* [MainViewModel.cs](CS/MainViewModel.cs)
+* [App.xaml](CS/App.xaml)
 <!-- default file list end -->
 
 ## Documentation
