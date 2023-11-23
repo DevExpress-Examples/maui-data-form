@@ -1,11 +1,11 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
-             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             xmlns:local="clr-namespace:EditFormExample"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             ios:Page.UseSafeArea="true"
-             x:Class= "EditFormExample.MainPage">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+    xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+    xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
+    xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    xmlns:local="clr-namespace:EditFormExample"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" ios:Page.UseSafeArea="true" x:Class= "EditFormExample.MainPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Apply" Clicked="ToolbarItem_Clicked" Command="{Binding SaveCommand}"/>
     </ContentPage.ToolbarItems>
@@ -15,10 +15,41 @@
     <ContentPage.BindingContext>
         <local:MainViewModel/>
     </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <Style TargetType="dx:DXButton">
+            <Setter Property="BackgroundColor" Value="#00E6E1E6"/>
+            <Setter Property="PressedBackgroundColor" Value="#E6E1E6"/>
+            <Setter Property="TextColor" Value="#1C1B1E"/>
+            <Setter Property="PressedTextColor" Value="#1C1B1E"/>
+            <Setter Property="IconColor" Value="#1C1B1E"/>
+            <Setter Property="PressedIconColor" Value="#1C1B1E"/>
+            <Setter Property="CornerRadius" Value="0"/>
+            <Setter Property="HeightRequest" Value="56"/>
+        </Style>
+    </ContentPage.Resources>
     <Grid>
         <ScrollView>
-            <VerticalStackLayout  BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Black}}">
-                <Image Source="{Binding EditedItem.PhotoPath}" WidthRequest="100" HeightRequest="100" Margin="0,30,0,10" />
+            <VerticalStackLayout BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Black}}">
+                <dx:DXBorder CornerRadius="70" HeightRequest="140" WidthRequest="140" Margin="0,30,0,10">
+                    <Grid>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ImageTapped"/>
+                        </Grid.GestureRecognizers>
+                        <Label Text="Upload Avatar" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        <Image x:Name="preview" Source="{Binding EditedItem.PhotoPath}" WidthRequest="140" HeightRequest="140" >
+                        </Image>
+                    </Grid>
+                </dx:DXBorder>
+                <dxco:BottomSheet x:Name="bottomSheet" HalfExpandedRatio="0.3" AllowedState="HalfExpanded">
+                    <dx:DXStackLayout>
+                        <dx:DXButton Icon="delete" Content="Remove Photo" Tap="DeletePhotoClicked"/>
+                        <dx:DXBorder HeightRequest="1" BorderThickness="1" BorderColor="#303A343D"/>
+                        <dx:DXButton Icon="take_photo" Content="Take Photo" Tap="TakePhotoClicked"/>
+                        <dx:DXBorder HeightRequest="1" BorderThickness="1" BorderColor="#303A343D"/>
+                        <dx:DXButton Icon="gallery" Content="Select from Gallery" Tap="SelectPhotoClicked"/>
+                    </dx:DXStackLayout>
+                </dxco:BottomSheet>
+
                 <Border BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}" StrokeThickness="0" StrokeShape="RoundRectangle 10,10,0,0">
                     <Border.Shadow>
                         <Shadow Brush="Gray" Offset="4,8" Radius="6" />
