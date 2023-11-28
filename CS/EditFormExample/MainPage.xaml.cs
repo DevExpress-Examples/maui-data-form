@@ -37,6 +37,7 @@ namespace EditFormExample
         {
             await Dispatcher.DispatchAsync(() => {
                 bottomSheet.State = BottomSheetState.Hidden;
+                editControl.IsVisible = false;
                 preview.Source = null;
             });
         }
@@ -45,6 +46,7 @@ namespace EditFormExample
         {
             var photo = await MediaPicker.PickPhotoAsync();
             await ProcessResult(photo);
+            editControl.IsVisible = true;
         }
 
         private async void TakePhotoClicked(object sender, EventArgs args)
@@ -54,6 +56,7 @@ namespace EditFormExample
 
             var photo = await MediaPicker.Default.CapturePhotoAsync();
             await ProcessResult(photo);
+            editControl.IsVisible = true;
         }
 
         private async Task ProcessResult(FileResult result)

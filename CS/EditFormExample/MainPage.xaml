@@ -30,16 +30,18 @@
     <Grid>
         <ScrollView>
             <VerticalStackLayout BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Black}}">
-                <dx:DXBorder CornerRadius="70" HeightRequest="140" WidthRequest="140" Margin="0,30,0,10">
-                    <Grid>
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="ImageTapped"/>
-                        </Grid.GestureRecognizers>
-                        <Label Text="Upload Avatar" VerticalOptions="Center" HorizontalOptions="Center"/>
-                        <Image x:Name="preview" Source="{Binding EditedItem.PhotoPath}" WidthRequest="140" HeightRequest="140" >
-                        </Image>
-                    </Grid>
-                </dx:DXBorder>
+                <Grid HeightRequest="140" WidthRequest="140" Margin="0,30,0,10">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImageTapped"/>
+                    </Grid.GestureRecognizers>
+                    <Label TextColor="#6750a4" Text="Upload Avatar" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <dx:DXBorder CornerRadius="70" >
+                        <Image x:Name="preview" Source="{Binding EditedItem.PhotoPath}" WidthRequest="140" HeightRequest="140"/>
+                    </dx:DXBorder>
+                    <dx:DXBorder x:Name="editControl" BorderColor="White" BorderThickness="2" BackgroundColor="#e8def8" WidthRequest="48" HeightRequest="48" CornerRadius="70" HorizontalOptions="End" VerticalOptions="End">
+                        <Image Source="pencil" WidthRequest="24" HeightRequest="24"/>
+                    </dx:DXBorder>
+                </Grid>
                 <dxco:BottomSheet x:Name="bottomSheet" HalfExpandedRatio="0.3" AllowedState="HalfExpanded">
                     <dx:DXStackLayout>
                         <dx:DXButton Icon="delete" Content="Remove Photo" Tap="DeletePhotoClicked"/>
