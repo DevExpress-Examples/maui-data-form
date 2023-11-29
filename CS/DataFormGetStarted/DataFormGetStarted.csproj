@@ -1,47 +1,42 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios</TargetFrameworks>
-    	<OutputType>Exe</OutputType>
-		<UseMaui>true</UseMaui>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<SingleProject>true</SingleProject>
-		<RootNamespace>DataFormGetStarted</RootNamespace>
-
-		<!-- Display name -->
-		<ApplicationTitle>DataFormGetStarted</ApplicationTitle>
-
-		<!-- App Identifier -->
-		<ApplicationId>com.companyname.DataFormGetStarted</ApplicationId>
-		<ApplicationIdGuid>6B8AB780-F9B7-41AC-9123-9FA501528C67</ApplicationIdGuid>
-		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-		<ApplicationVersion>1</ApplicationVersion>
-    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net7.0-ios'">14.2</SupportedOSPlatformVersion>
-    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net7.0-android'">21.0</SupportedOSPlatformVersion>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
-	  <CreatePackage>false</CreatePackage>
-	</PropertyGroup>
-	<ItemGroup>
-	  <MauiImage Remove="Resources\Images\name.png" />
-	</ItemGroup>
-	<ItemGroup>
-		<!-- App Icon -->
-		<MauiImage Include="Resources\appicon.svg" IsAppIcon="true" ForegroundFile="Resources\splashscreen.svg" Color="#FFFFFF" />
-
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\splashscreen.svg" Color="#5B27D9" />
-
-		<!-- Images -->
-		<MauiImage Include="Resources\Images\*" />
-
-		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\Fonts\*" />
-	</ItemGroup>
-	<ItemGroup>
-	    
-	  <PackageReference Include="DevExpress.Maui.Editors" Version="22.2.*" />
-	  <PackageReference Include="DevExpress.Maui.Controls" Version="22.2.*" />
-	</ItemGroup>
-</Project> 
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <UseMaui>true</UseMaui>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SingleProject>true</SingleProject>
+    <RootNamespace>DataFormGetStarted</RootNamespace>
+    <!-- Display name -->
+    <ApplicationTitle>DataFormGetStarted</ApplicationTitle>
+    <!-- App Identifier -->
+    <ApplicationId>com.companyname.DataFormGetStarted</ApplicationId>
+    <ApplicationIdGuid>6B8AB780-F9B7-41AC-9123-9FA501528C67</ApplicationIdGuid>
+    <!-- Versions -->
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net8.0-ios'">14.2</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net8.0-android'">21.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
+  <ItemGroup>
+    <MauiImage Remove="Resources\Images\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- App Icon -->
+    <MauiImage Include="Resources\appicon.svg" IsAppIcon="true" ForegroundFile="Resources\splashscreen.svg" Color="#FFFFFF" />
+    <!-- Splash Screen -->
+    <MauiSplashScreen Include="Resources\splashscreen.svg" Color="#5B27D9" />
+    <!-- Images -->
+    <MauiImage Include="Resources\Images\*" />
+    <!-- Custom Fonts -->
+    <MauiFont Include="Resources\Fonts\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <PackageReference Include="DevExpress.Maui.Editors" Version="23.2.2-beta" />
+    <PackageReference Include="DevExpress.Maui.Controls" Version="23.2.2-beta" />
+  </ItemGroup>
+</Project>

@@ -1,5 +1,5 @@
 <!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/439340394/22.2.3%2B)
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/439340394/23.2.2%2B)
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1054610)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
@@ -29,7 +29,6 @@ See the following help topic for more information: [DevExpress Data Form for .NE
 
 You can also refer to the following YouTube video for instructions on how to get started with the Data Form Control: [Adding a Data Form to Your .NET MAUI App](https://www.youtube.com/watch?v=imUCmru5Lwc&ab_channel=DevExpress).
 
-
 ### Customize the Data Form Appearance
 
 The [CustomAppearance](./CS/CustomAppearance/) project shows how to customize the appearance of Data Form items.
@@ -40,7 +39,6 @@ The [CustomAppearance](./CS/CustomAppearance/) project shows how to customize th
 
 The [AddingDataEditorsAtRuntime](./CS/AddingDataEditorsAtRuntime/) project shows how to add and remove Data Form items at runtime.
 
-
 <img src="./Images/data-form-runtime-iphone.png" alt="DevExpress Data Form for iOS" height="700"/> <img src="./Images/data-form-runtime-android.png" alt="DevExpress Data Form for Android" height="700"/>
 
 ### Display ComboBox
@@ -48,6 +46,12 @@ The [AddingDataEditorsAtRuntime](./CS/AddingDataEditorsAtRuntime/) project shows
 The [ComboBoxEditor](./CS/ComboBoxEditor/) project shows how to display a ComboboxEdit control within the Data Form.
 
 <img src="./Images/data-form-combobox-iphone.png" alt="DevExpress Data Form for iOS" height="700"/> <img src="./Images/data-form-combobox-android.png" alt="DevExpress Data Form for Android" height="700"/>
+
+### Upload and Edit Avatar
+
+The [EditFormExample](./CS/EditFormExample/) project shows how to integrate the [ImageEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ImageEdit) control within the Data Form to edit the avatar.
+
+<img src="./Images/data-form-with-image-edit-upload.png" alt="DevExpress Data Form for iOS" height="700"/> <img src="./Images/data-form-with-image-edit-bs.png" alt="DevExpress Data Form for Android" height="700"/>
 
 ## Documentation
 
@@ -57,6 +61,7 @@ The [ComboBoxEditor](./CS/ComboBoxEditor/) project shows how to display a Combob
 - [Navigation](https://docs.devexpress.com/MAUI/403297/navigation/index)
 - [Data Editors](https://docs.devexpress.com/MAUI/403427/editors/index)
 - [Collection View](https://docs.devexpress.com/MAUI/403324/collection-view/index)
+- [Image Editor](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ImageEdit)
 
 ## More Examples
 

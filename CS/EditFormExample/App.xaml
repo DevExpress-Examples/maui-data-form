@@ -1,0 +1,37 @@
+﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:local="clr-namespace:EditFormExample"
+             x:Class= "EditFormExample.App"
+             windows:Application.ImageDirectory="Assets">
+    <Application.Resources>
+        <Color x:Key="Primary">#6750A4</Color>
+        <Color x:Key="Primary_Dark">#D0BCFF</Color>
+        <Color x:Key="Secondary">#DFD8F7</Color>
+        <Color x:Key="Tertiary">#2B0B98</Color>
+        <Color x:Key="White">White</Color>
+        <Color x:Key="Black">Black</Color>
+        <Color x:Key="Background_Light">#0D1B32</Color>
+        <Color x:Key="Background_Dark">#0D1B32</Color>
+        <Color x:Key="Gray50">#F2F2F7</Color>
+        <Color x:Key="Gray100">#E1E1E1</Color>
+        <Color x:Key="Gray200">#C8C8C8</Color>
+        <Color x:Key="Gray300">#ACACAC</Color>
+        <Color x:Key="Gray400">#919191</Color>
+        <Color x:Key="Gray500">#6E6E6E</Color>
+        <Color x:Key="Gray600">#404040</Color>
+        <Color x:Key="Gray900">#212121</Color>
+        <Color x:Key="Gray950">#141414</Color>
+        <Color x:Key="TonalForeground">#1D192B</Color>
+        <Color x:Key="OnSurfaceForeground">#1C1B1F</Color>
+
+        <Style TargetType="Page" ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}" />
+        </Style>
+        <Style TargetType="Shell" ApplyToDerivedTypes="True">
+            <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Black}}" />
+            <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource White}}" />
+            <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource White}}" />
+        </Style>
+    </Application.Resources>
+</Application>
