@@ -1,32 +1,22 @@
 # DataFormView for .NET MAUI - Edit a Contact’s Data
 
-This example demonstrates how to use a [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) to implement a contact edit form.  
+This example demonstrates how to use the [`DataFormView`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) control to implement a contact edit form. To edit the user avatar, you can use the [`ImageEdit`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ImageEdit) control. 
 
-<img src="https://user-images.githubusercontent.com/12169834/228216536-48240713-be2f-45e7-9dda-dbf843682500.png" width="30%"/>
-
-Included controls and their properties:
-
-* [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView): [ValidateProperty](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView.ValidateProperty), [DataObject](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView.DataObject)
-
-* [StatusBarBehavior](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/behaviors/statusbar-behavior): [StatusBarColor](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/behaviors/statusbar-behavior?tabs=ios#using-the-statusbarbehavior), [StatusBarStyle](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/behaviors/statusbar-behavior?tabs=ios#using-the-statusbarbehavior)
-
+<img src="../../Images/data-form-with-image-edit-upload.png" alt="DevExpress Data Form for iOS" height="700"/> <img src="../../Images/data-form-with-image-edit-bs.png" alt="DevExpress Data Form for Android" height="700"/>
 
 ## Implementation Details
 
-
-* To bind a DataFormView to an object, specify the [DataFormView.DataObject](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView.DataObject) property.
+* Specify the [`DataFormView.DataObject`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView.DataObject) property to bind a `DataFormView` to an object.
   
-* Specify a [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) editor's [FieldName](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.FieldName) property to bind the editor to a view model's property:
+* Use a `DataFormView` editor's [`FieldName`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.FieldName) property to bind the editor to a view model's property:
 
     ```xml
     <dxdf:DataFormTextItem FieldName="FirstName" .../>
     ```
 
-    File to Look At: [MainPage.xaml](MainPage.xaml)
+* Call the [`DataFormView.Commit`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView.Commit) method to validate input values and send changes to the data source. 
 
-* Call the [DataFormView.Commit](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView.Commit) method to validate input values and send changes to the data source. 
-
-* [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) supports validation events and attributes. The following code uses a validation event for `Email` values:
+* `DataFormView` supports validation events and attributes. The following code uses a validation event for `Email` values:
 
     ```csharp
     private void ValidateCustomerProperties(object sender, DevExpress.Maui.DataForm.DataFormPropertyValidationEventArgs e) {
@@ -39,8 +29,6 @@ Included controls and their properties:
         }
     }
     ```
-
-    File to Look At: [MainPage.xaml.cs](MainPage.xaml.cs)
 
     The following code snippet defines validation attributes for `FirstName` and `LastName` properties:
 
@@ -56,20 +44,15 @@ Included controls and their properties:
     }
     ```
 
-    File to Look At: [MainPage.xaml](MainPage.xaml)
-
-* [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) automatically aligns its editors. You can customize the color and width of editor labels:
+* `DataFormView` automatically aligns its editors. You can customize the color and width of editor labels:
 
     ```xaml
     <dxdf:DataFormView EditorLabelColor="{StaticResource Primary}" EditorLabelWidth="40">
     ```
 
-    File to Look At: [MainPage.xaml](MainPage.xaml)
+* Embedded `DataFormView`'s editors contain customization options such as [`LabelIcon`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon), [`InplaceLabelText`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.InplaceLabelText), [`LabelText`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelText), and [`IsInplaceLabelFloating`](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.IsLabelFloating).
 
-* Embedded [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView)'s editors contain customization options such as [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon), [InplaceLabelText](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.InplaceLabelText), [LabelText](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelText), and [IsInplaceLabelFloating](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.EditBase.IsLabelFloating).
-
-* You can use the [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon) property to divide editors into visual groups. To do this, specify the [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon) property of the first editor in a group.
-
+* You can use the `LabelIcon` property to divide editors into visual groups.
 
     ```xml
     <dxdf:DataFormView ...>
@@ -78,37 +61,38 @@ Included controls and their properties:
     </dxdf:DataFormView>
     ```
 
-    File to Look At: [MainPage.xaml](MainPage.xaml)
-
-* If an editor's [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon) property is not specified, [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) displays the bound property's name in the editor's label area. You can set the editor's [LabelIcon](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem.LabelIcon) property to an empty string to hide this text.
+* If an editor's `LabelIcon` property is not specified, `DataFormView` displays the bound property's name in the editor's label area. You can set the editor's `LabelIcon` property to an empty string to hide this text.
 
     ```xml
     <dxdf:DataFormTextItem FieldName="LastName" LabelText="" InplaceLabelText="Last Name" .../>
     ```
     
-* [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView) items support masks. Specify the [DataFormMaskedItem.Mask](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormMaskedItem.Mask) property to define a mask. 
+* `DataFormView` items support masks. Specify the [`DataFormMaskedItem.Mask`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormMaskedItem.Mask) property to define a mask. 
 
     ```xml
     <dxdf:DataFormMaskedItem Mask="+1 (000) 000-0000" />
     ```
-* Specify a [DataFormItem](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem)'s [Keyboard](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormTextItemBase.Keyboard) property to define a type of keyboard used to input text.
+* Specify a [`DataFormItem`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormItem)'s [`Keyboard`](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormTextItemBase.Keyboard) property to define a type of keyboard used to input text.
 
 ## Files to Look At
 
 <!-- default file list -->
-* [MainPage.xaml](MainPage.xaml)
-* [MainPage.xaml.cs](MainPage.xaml.cs)
-* [MainViewModel.cs](MainViewModel.cs)
-* [App.xaml](App.xaml)
+* [MainPage.xaml](CS/MainPage.xaml)
+* [MainPage.xaml.cs](CS/MainPage.xaml.cs)
+* [MainViewModel.cs](CS/MainViewModel.cs)
+* [App.xaml](CS/App.xaml)
 <!-- default file list end -->
 
 ## Documentation
 
-* [Featured Scenario: Context Menu Actions in Popup](https://docs.devexpress.com/MAUI/404342)
-* [Featured Scenarios](https://docs.devexpress.com/MAUI/404291)
-* [SimpleButton.Content](https://docs.devexpress.com/MAUI/DevExpress.Maui.Controls.SimpleButton.Content)
-* [DXPopup](https://docs.devexpress.com/MAUI/DevExpress.Maui.Controls.DXPopup)
+* [DataFormView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView)
+* [StatusBarBehavior](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/behaviors/statusbar-behavior)
+* [ImageEdit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Editors.ImageEdit)
+* [DXBorder](https://docs.devexpress.com/MAUI/DevExpress.Maui.Core.DXBorder)
 
 ## More Examples
 
-* [DevExpress Mobile UI for .NET MAUI](https://github.com/DevExpress-Examples/maui-demo-app/)
+* [Get Started with DevExpress Data Form for .NET MAUI](../DataFormGetStarted)
+* [Add and Remove DataFormItems at Runtime](../AddingDataEditorsAtRuntime)
+* [Customize a DataFrom Appearance](../CustomAppearance)
+* [Display a ComboBoxEdit in the DataForm](../ComboBoxEditor)
