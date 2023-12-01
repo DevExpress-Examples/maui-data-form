@@ -77,10 +77,10 @@ This example demonstrates how to use the [`DataFormView`](https://docs.devexpres
 ## Files to Look At
 
 <!-- default file list -->
-* [MainPage.xaml](CS/MainPage.xaml)
-* [MainPage.xaml.cs](CS/MainPage.xaml.cs)
-* [MainViewModel.cs](CS/MainViewModel.cs)
-* [App.xaml](CS/App.xaml)
+* [MainPage.xaml](./MainPage.xaml)
+* [MainPage.xaml.cs](./MainPage.xaml.cs)
+* [MainViewModel.cs](./MainViewModel.cs)
+* [App.xaml](./App.xaml)
 <!-- default file list end -->
 
 ## Documentation
