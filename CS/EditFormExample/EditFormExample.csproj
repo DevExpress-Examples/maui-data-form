@@ -1,55 +1,44 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFrameworks>net8.0-ios;net8.0-android</TargetFrameworks>
-		<OutputType>Exe</OutputType>
-		<UseMaui>true</UseMaui>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<SingleProject>true</SingleProject>
-		<RootNamespace>EditFormExample</RootNamespace>
-
-		<!-- Display name -->
-		<ApplicationTitle>Edit Form</ApplicationTitle>
-
-		<!-- App Identifier -->
-		<ApplicationId>com.companyname.EditForm</ApplicationId>
-		<ApplicationIdGuid>0312D68B-8F21-46C8-B693-AF54F1BC8E18</ApplicationIdGuid>
-		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-		<ApplicationVersion>1</ApplicationVersion>
-
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-		<UseInterpreter Condition="$(TargetFramework.Contains('-ios')) AND '$(Configuration)' == 'Release'">True</UseInterpreter>
-	</PropertyGroup>
-	<ItemGroup>
-		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#6750A4" />
-
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#6750A4" BaseSize="128,128" />
-
-		<!-- Images -->
-		<MauiImage Include="Resources\Images\*" />
-
-		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\Fonts\*" />
-	</ItemGroup>
-
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-		<PackageReference Include="CommunityToolkit.Maui" Version="5.1.0" />
-		<PackageReference Include="DevExpress.Maui.Core" Version="23.2.2-beta" />
-		<PackageReference Include="DevExpress.Maui.Editors" Version="23.2.2-beta" />
-		<TrimmableAssembly Include="DevExpress.Data.v23.2" />
-	</ItemGroup>
-
-
-	<ItemGroup>
-		<MauiXaml Update="AppShell.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-	</ItemGroup>
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-ios;net8.0-android</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <UseMaui>true</UseMaui>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SingleProject>true</SingleProject>
+    <RootNamespace>EditFormExample</RootNamespace>
+    <!-- Display name -->
+    <ApplicationTitle>Edit Form</ApplicationTitle>
+    <!-- App Identifier -->
+    <ApplicationId>com.companyname.EditForm</ApplicationId>
+    <ApplicationIdGuid>0312D68B-8F21-46C8-B693-AF54F1BC8E18</ApplicationIdGuid>
+    <!-- Versions -->
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+    <UseInterpreter Condition="$(TargetFramework.Contains('-ios')) AND '$(Configuration)' == 'Release'">True</UseInterpreter>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- App Icon -->
+    <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#6750A4" />
+    <!-- Splash Screen -->
+    <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#6750A4" BaseSize="128,128" />
+    <!-- Images -->
+    <MauiImage Include="Resources\Images\*" />
+    <!-- Custom Fonts -->
+    <MauiFont Include="Resources\Fonts\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <PackageReference Include="CommunityToolkit.Maui" Version="5.1.0" />
+    <PackageReference Include="DevExpress.Maui.Core" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Maui.Editors" Version="23.2.*" />
+    <TrimmableAssembly Include="DevExpress.Data.v23.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <MauiXaml Update="AppShell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </MauiXaml>
+  </ItemGroup>
 </Project>
