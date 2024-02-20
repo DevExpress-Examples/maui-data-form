@@ -29,7 +29,7 @@
     </ContentPage.Resources>
     <Grid>
         <ScrollView>
-            <VerticalStackLayout BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Black}}">
+            <dx:DXStackLayout Orientation="Vertical" BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Black}}">
                 <dx:DXBorder CornerRadius="70" HeightRequest="140" WidthRequest="140" Margin="0,30,0,10">
                     <Grid>
                         <Grid.GestureRecognizers>
@@ -66,7 +66,7 @@
                         <dxdf:DataFormNumericItem FieldName="ZipCode" IsLabelVisible="True" LabelText="" InplaceLabelText="Zip" IsInplaceLabelFloating="True"/>
                     </dxdf:DataFormView>
                 </Border>
-            </VerticalStackLayout>
+            </dx:DXStackLayout>
         </ScrollView>
     </Grid>
 </ContentPage>
