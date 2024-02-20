@@ -2,14 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              x:Class="ComboBoxEditor.MainPage">
 
     <ScrollView>
-        <StackLayout>
+        <dx:DXStackLayout>
             <dxdf:DataFormView x:Name="dataForm"
                                EditorLabelWidth="95">
             </dxdf:DataFormView>
-        </StackLayout>
+        </dx:DXStackLayout>
     </ScrollView>
 
 </ContentPage>
