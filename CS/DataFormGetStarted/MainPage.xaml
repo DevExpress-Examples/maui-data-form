@@ -2,19 +2,19 @@
     x:Class="DataFormGetStarted.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
     xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
     xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
     xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
     ios:Page.UseSafeArea="true">
     <ScrollView>
-        <StackLayout>
-        <dxdf:DataFormView
-            x:Name="dataform"
-            EditorBoxMode="Filled"
-            EditorLabelColor="#505050"
-            EditorLabelFontAttributes="Italic"
-            ValidationMode="PropertyChanged" />
-    </StackLayout>
+        <dx:DXStackLayout>
+            <dxdf:DataFormView
+                x:Name="dataform"
+                EditorBoxMode="Filled"
+                EditorLabelColor="#505050"
+                EditorLabelFontAttributes="Italic"
+                ValidationMode="PropertyChanged" />
+        </dx:DXStackLayout>
     </ScrollView>
 </ContentPage>
