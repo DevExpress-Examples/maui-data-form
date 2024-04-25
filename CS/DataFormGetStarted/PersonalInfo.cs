@@ -12,7 +12,7 @@ namespace DataFormGetStarted
     {
         [DataFormItemPosition(RowOrder = 1, ItemOrderInRow = 1)]
         [DataFormTextEditor(InplaceLabelText = "First Name")]
-        [DataFormDisplayOptions(LabelIcon = "name", GroupName = "Profile")]
+        [DataFormDisplayOptions(LabelIcon = "person_outline", GroupName = "Profile")]
         public string FirstName { get; set; }
 
         [DataFormItemPosition(RowOrder = 1, ItemOrderInRow = 2)]
