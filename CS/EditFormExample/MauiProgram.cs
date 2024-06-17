@@ -14,6 +14,9 @@ namespace EditFormExample {
                 .UseMauiApp<App>()
                 .UseDevExpress(useLocalization: true)
                 .UseMauiCommunityToolkit()
+                .UseDevExpressCollectionView()
+                .UseDevExpressControls()
+                .UseDevExpressEditors()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

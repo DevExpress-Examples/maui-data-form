@@ -7,6 +7,9 @@ namespace ComboBoxEditor {
             builder
                 .UseMauiApp<App>()
                 .UseDevExpress()
+                .UseDevExpressCollectionView()
+                .UseDevExpressControls()
+                .UseDevExpressEditors()
                 .ConfigureFonts(fonts => {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");

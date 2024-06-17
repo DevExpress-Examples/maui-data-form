@@ -1,19 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
-             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-             xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
-             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              x:Class="CustomAppearance.MainPage">
     <ContentPage.Resources>
-        <Style TargetType="dxe:EditBase" ApplyToDerivedTypes="True">
+        <Style TargetType="dx:EditBase" ApplyToDerivedTypes="True">
             <Setter Property="CornerRadius" Value="0"/>
             <Setter Property="TextColor" Value="BlueViolet"/>
         </Style>
     </ContentPage.Resources>
 
-    <dxdf:DataFormView x:Name="dataForm"
+    <dx:DataFormView x:Name="dataForm"
                        IsEditorLabelVisible="False"
                        ContentPadding="12,0"                   
                        GroupHeaderPadding="2,8"
@@ -23,7 +19,7 @@
                        RowSeparatorColor="#aaaaaa"
                        RowSeparatorThickness="1"
                        IsLastRowSeparatorVisible="False">
-        <dxdf:DataFormCustomItem FieldName="PhotoPath">
+        <dx:DataFormCustomItem FieldName="PhotoPath">
             <dx:DXStackLayout Padding="16">
                 <Frame Padding="0"
                        HorizontalOptions="Center"
@@ -37,6 +33,6 @@
                            Aspect="AspectFill"/>
                 </Frame>
             </dx:DXStackLayout>
-        </dxdf:DataFormCustomItem>
-    </dxdf:DataFormView>
+        </dx:DataFormCustomItem>
+    </dx:DataFormView>
 </ContentPage>
