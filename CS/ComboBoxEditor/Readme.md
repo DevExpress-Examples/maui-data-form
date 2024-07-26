@@ -27,7 +27,7 @@ In this example, the data form is bound to the *EmployeeInfo* object and uses co
 ## Documentation
 
 * [Customize .NET MAUI Control Appearance](https://docs.devexpress.com/MAUI/404147/customize-appearance)
-* [DataFormView class - Appearance Properties](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataForm.DataFormView#data-form-views-items)
+* [Customize Layout and Appearance in DevExpress Data Form for .NET MAUI](https://docs.devexpress.com/MAUI/403649/data-form/layout-and-appearance)
 
 ## More Examples
 
